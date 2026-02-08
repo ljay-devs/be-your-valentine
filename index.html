@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine? 💕</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="hearts-container" id="heartsContainer"></div>
+    
+    <!-- Main Container -->
+    <div class="container-fluid min-vh-100 d-flex align-items-center justify-content-center p-3" id="mainContent">
+        <div class="valentine-card">
+            <!-- Sparkles decoration -->
+            <div class="sparkle sparkle-1">✨</div>
+            <div class="sparkle sparkle-2">💫</div>
+            <div class="sparkle sparkle-3">⭐</div>
+            
+            <!-- Cute GIF -->
+            <div class="gif-container mb-4">
+                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZG51aTg3bDFhN2V2enBndmhvbWxsOHR5bnRvcW9hNnhyaDBrY3R2eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MIAnkATgyB0Pe2gEds/giphy.gif" 
+                     alt="Cute Valentine Animation" 
+                     class="valentine-gif">
+            </div>
+            
+            <!-- Main Question -->
+            <h1 class="valentine-title mb-3">
+                Will you be my Valentine, <span class="name-highlight" id="userName">Sweetheart</span>?
+            </h1>
+            
+            <!-- Sweet Subtext -->
+            <p class="valentine-subtitle mb-4">
+                I promise cuddles, smiles, and a lifetime of love just for you 💕
+            </p>
+            
+            <!-- Buttons Container -->
+            <div class="buttons-container" id="buttonsContainer">
+                <button class="btn btn-yes" id="yesBtn">
+                    <i class="fas fa-heart"></i> Yes!
+                </button>
+                <button class="btn btn-no" id="noBtn">
+                    <i class="fas fa-heart-broken"></i> No
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Success Screen (Hidden Initially) -->
+     
+    <div class="success-screen" id="successScreen">
+        <div class="success-content">
+            <div class="success-icon mb-4">
+                <i class="fas fa-heart"></i>
+            </div>
+            
+            <h1 class="success-title mb-3">Yay! 🎉</h1>
+            
+            <p class="success-message mb-4">
+                You've made me the happiest person alive! 💖
+            </p>
+            
+            <!-- Love Letter -->
+            <div class="love-letter mb-4">
+                <div class="letter-header">
+                    <i class="fas fa-envelope-open-heart"></i> A Love Letter
+                </div>
+                <div class="letter-content">
+                    <p>Dear <span id="successName">Sweetheart</span>,</p>
+                    <p>From the moment I saw you, I knew you were special. Your smile lights up my world, and your laugh is my favorite melody.</p>
+                    <p>I can't wait to share countless cuddles, adventures, and sweet moments with you. Thank you for saying yes and making this Valentine's Day unforgettable!</p>
+                    <p class="letter-signature">Forever yours,<br>Your Valentine 💕</p>
+                </div>
+            </div>
+            
+            <!-- Virtual Gifts -->
+            <div class="virtual-gifts mb-4">
+                <div class="gift-item">
+                    <span class="gift-icon">🌹</span>
+                    <span class="gift-label">Roses</span>
+                </div>
+                <div class="gift-item">
+                    <span class="gift-icon">🍫</span>
+                    <span class="gift-label">Chocolates</span>
+                </div>
+                <div class="gift-item">
+                    <span class="gift-icon">🧸</span>
+                    <span class="gift-label">Teddy Bear</span>
+                </div>
+            </div>
+            
+            <!-- Music Controls -->
+            <div class="music-controls mb-4">
+                <div class="music-title mb-2">
+                    <i class="fas fa-music"></i> Now Playing: Love. by wave to earth
+                </div>
+                <div class="music-buttons">
+                    <button class="btn btn-music" id="playPauseBtn">
+                        <i class="fas fa-pause"></i> Pause
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Share Button -->
+            <button class="btn btn-share" id="shareBtn">
+                <i class="fas fa-share-alt"></i> Share This Love
+            </button>
+        </div>
+    </div>
+    
+    <!-- Audio Element (Hidden) -->
+    <audio id="romanticMusic" loop preload="auto">
+        <source src="/assets/love.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas"></canvas>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
